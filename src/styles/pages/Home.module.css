@@ -26,3 +26,12 @@
     align-content: center;
 }
 
+@media(max-width: 720px){
+    .container section {
+
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+    }
+}
