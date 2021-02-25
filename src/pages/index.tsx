@@ -6,6 +6,7 @@ import Countdown from "../components/Countdown";
 
 import styles from '../styles/pages/Home.module.css'
 import ChallengeBox from '../components/ChallengeBox';
+import SwitchReact from '../components/Switch'
 
 export default function Home() {
   return (
@@ -13,6 +14,10 @@ export default function Home() {
         <Head>
             <title>Início | Move.it</title>
         </Head>
+
+        <div className={styles.header}>
+            <SwitchReact />
+        </div>
         <ExperienceBar />
         <section>
             <div>

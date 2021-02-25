@@ -14,7 +14,7 @@
     align-items: center;
     justify-content: space-evenly;
 
-    background-color: var(--white);
+    background-color: var(--secondary);
     box-shadow: 0 0 60px rgba(0, 0, 0, 0.05);
     border-radius: 5px;
     font-size: 8.5rem;
@@ -65,7 +65,7 @@
 }
 
 .countdownButtonActive {
-    background-color: var(--white);
+    background-color: var(--secondary);
     color: var(--title);
 
     transition: background-color 0.2s;
@@ -77,7 +77,7 @@
 }
 
 .countdownButton:disabled {
-    background-color: var(--white);
+    background-color: var(--secondary);
     color: var(--text);
     cursor: not-allowed;
 }

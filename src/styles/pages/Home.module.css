@@ -2,10 +2,19 @@
     height: 100vh;
     max-width: 992px;
     margin: 0 auto;
-    padding: 2.5rem 2rem;
+    padding: 0.5rem 2rem;
 
     display: flex;
     flex-direction: column;
+}
+
+.header {
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 0.5rem;
 }
 
 .container section {
