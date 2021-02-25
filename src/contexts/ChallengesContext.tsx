@@ -1,4 +1,4 @@
-import { createContext, useState, ReactNode } from 'react'
+import { createContext, useState, ReactNode, useEffect } from 'react'
 
 import challenges from '../../challenges.json'
 
@@ -21,6 +21,7 @@ interface ChallengesContextData {
     activeChallenges: Challenges;
     resetChallenge: () => void;
     experienceToNextLevel: number;
+    completeChallenge: () => void;
 }
 
 export const ChallengesContext = createContext({} as ChallengesContextData)
@@ -39,15 +40,46 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
         setLevel(level + 1)
     }
 
+    useEffect(() => {
+        Notification.requestPermission()
+    },[])
+
     function startNewChallenge() {
        const randomChallenges = Math.floor(Math.random() * challenges.length)
        const indexChallenges = challenges[randomChallenges]
 
        setActiveChallenges(indexChallenges)
+
+       new Audio('/notification.mp3').play()
+
+       if(Notification.permission === 'granted'){
+           new Notification('Novo Desafio \u{1F947}', {
+               body: `Valendo ${indexChallenges.amount} Xp`,
+               icon: '/favicon.png'
+           })
+       }
     }
 
     function resetChallenge() {
         setActiveChallenges(null)
+    }
+
+    function completeChallenge() {
+        if(!activeChallenges)
+            return
+
+        const { amount } = activeChallenges
+
+        let finalExperience = currentExperience + amount
+
+        if(finalExperience > experienceToNextLevel){
+            finalExperience = finalExperience - experienceToNextLevel
+            levelUp()
+        }
+
+        setCurrentExperience(finalExperience)
+        setActiveChallenges(null)
+        setChallengeCompleted(challengeCompleted + 1)
     }
 
     return(
@@ -60,7 +92,8 @@ export function ChallengesProvider({ children }: ChallengesProviderProps) {
                 startNewChallenge,
                 activeChallenges,
                 resetChallenge,
-                experienceToNextLevel
+                experienceToNextLevel,
+                completeChallenge
              }}
         >
             {children}
