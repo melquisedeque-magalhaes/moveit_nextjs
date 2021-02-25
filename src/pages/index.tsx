@@ -1,38 +1,31 @@
-import Head from 'next/head'
-import CompletedChallenges from "../components/CompletedChallenges";
-import ExperienceBar from "../components/ExperienceBar";
-import Profile from "../components/Profile";
-import Countdown from "../components/Countdown";
-
+import { FiArrowRight, FiGithub } from 'react-icons/fi'
 import styles from '../styles/pages/Home.module.css'
-import ChallengeBox from '../components/ChallengeBox';
-import SwitchReact from '../components/Switch'
-import { CountdownProvider } from '../contexts/CountdownContext';
 
 export default function Home() {
-  return (
-    <div className={styles.container}>
-        <Head>
-            <title>Início | Move.it</title>
-        </Head>
-
-        <div className={styles.header}>
-            <SwitchReact />
-        </div>
-        <ExperienceBar />
-
-        <CountdownProvider>
+    return(
+        <div className={styles.container}>
             <section>
+
                 <div>
-                    <Profile />
-                    <CompletedChallenges />
-                    <Countdown />
+                    <img src="/logo_white.svg" alt=""/>
+
+                    <h2>Bem-vindo</h2>
+
+                    <div className={styles.home}>
+                        <FiGithub size={24} color='#fff'  />
+                        <p>Faça seu login com o GitHub para começar</p>
+                    </div>
+
+
+                    <div className={styles.home}>
+                        <input type="text" placeholder='Digite seu Github' />
+                        <button type='button'><FiArrowRight  size={24} color='#fff' /></button>
+                    </div>
                 </div>
-                <div>
-                    <ChallengeBox />
-                </div>
+
             </section>
-        </CountdownProvider>
-    </div>
-  )
+
+
+        </div>
+    )
 }
