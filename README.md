@@ -20,6 +20,7 @@
 <p align="center">
   <a href="#-projeto">Projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
   <a href="#rocket-Tecnologias">Tecnologias</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#-como-testar-o-projeto">Testando o projeto</a>
   <a href="#-como-contribuir">Como contribuir</a>
 </p>
 
