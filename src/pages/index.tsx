@@ -1,7 +1,19 @@
+import { useState } from 'react'
+import { useRouter } from 'next/router'
 import { FiArrowRight, FiGithub } from 'react-icons/fi'
 import styles from '../styles/pages/Home.module.css'
 
 export default function Home() {
+
+    const { push } = useRouter()
+
+    const [username, setUsername] = useState('')
+
+    function  handleSubmit(e) {
+        e.preventDefault();
+        push(`/${username}`)
+    }
+
     return(
         <div className={styles.container}>
             <section>
@@ -18,8 +30,8 @@ export default function Home() {
 
 
                     <div className={styles.home}>
-                        <input type="text" placeholder='Digite seu Github' />
-                        <button type='button'><FiArrowRight  size={24} color='#fff' /></button>
+                        <input type="text" placeholder='Digite seu Github' onChange={e => setUsername(e.target.value)} />
+                        <button type='button' onClick={handleSubmit}><FiArrowRight  size={24} color='#fff'/></button>
                     </div>
                 </div>
 

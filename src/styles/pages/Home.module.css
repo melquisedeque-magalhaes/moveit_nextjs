@@ -51,7 +51,7 @@
     border-radius: 5px;
     border: 0;
     background-color: var(--blue-dark);
-    color: var(--text);
+    color: var(--white);
 }
 
 .home button {
@@ -64,4 +64,5 @@
     background-color: var(--green);
     border-radius: 5px;
     border: 0;
+    margin-left: 4px;
 }
