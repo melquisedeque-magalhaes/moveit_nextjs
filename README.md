@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="/public/favicon.png" width="500px"/>
+  <img src="/public/favicon.png" width="300px"/>
 </h1>
 
 <h2 align="center"> Moveit ajudar pessoas que ficam muito tempo na frente do computador </h2>
