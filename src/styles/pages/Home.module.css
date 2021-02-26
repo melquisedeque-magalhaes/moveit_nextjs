@@ -13,11 +13,11 @@
     height: 100vh;
     max-width: 992px;
     margin: 0 auto;
-    padding: 0.5rem 2rem;
+    padding: 0rem 2rem;
 }
 
 .container img {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
     width: 400px;
     height: 100px;
 }
@@ -28,20 +28,22 @@
 }
 
 .container section > div h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
 }
 
 .home {
     display: flex;
     align-items: center;
-    margin-bottom: 2rem;
+    margin-bottom: 2.5rem;
 }
 
 .home p {
     font-size: 1rem;
     margin-left: 1.5rem;
     width: 250px;
+    color: #B2B9FF;
 }
 
 .home:-moz-placeholder {
@@ -72,4 +74,38 @@
     border-radius: 5px;
     border: 0;
     margin-left: 4px;
+}
+
+
+@media(max-width: 720px) {
+
+    .container section {
+        flex: 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container section > div {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .container img {
+        margin-bottom: 3rem;
+        width: 20rem;
+        height: 10rem;
+    }
+
+    .home input  {
+        height: 60px;
+        width: 250px;
+    }
+
+    .home button {
+        height: 60px;
+        width: 60px;
+    }
 }
