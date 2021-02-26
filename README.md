@@ -59,9 +59,9 @@
 
 ## 🚀 como testar o projeto
 
--- Faça um clone do projeto;
--- Entre na pasta do projeto e execulte: `yarn` ou `npm i`;
--- Execulte o projeto: `yarn dev`;
+- Faça um clone do projeto;
+- Entre na pasta do projeto e execulte: `yarn` ou `npm i`;
+- Execulte o projeto: `yarn dev`;
 
 
 ## 🤔 Como contribuir
