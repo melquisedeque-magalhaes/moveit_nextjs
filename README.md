@@ -36,7 +36,7 @@
 ## 📱 Projeto
 
 <h3 align="center">
-    SITE DEMO: <a href="https://moveit-nextjs.vercel.app/" target="_blank">Visualizar App 🗒️<a>
+    APP: <a href="https://moveit-nextjs.vercel.app/" target="_blank">Visualizar App 🗒️<a>
 </h3>
 
 <p>
