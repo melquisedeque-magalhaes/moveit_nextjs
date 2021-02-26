@@ -42,19 +42,19 @@
 </p>
 
 <h5 align="center">
-  <img src="./assets/app1"/>
+  <img src="./assets/app1.png"/>
 </h5>
 
 <h5 align="center">
-  <img src="./assets/app2"/>
+  <img src="./assets/app2.png"/>
 </h5>
 
 <h5 align="center">
-  <img src="./assets/app3"/>
+  <img src="./assets/app3.png"/>
 </h5>
 
 <h5 align="center">
-  <img src="./assets/app4"/>
+  <img src="./assets/app4.png"/>
 </h5>
 
 ## 🚀 como testar o projeto
