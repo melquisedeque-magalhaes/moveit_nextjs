@@ -1,37 +1,44 @@
 import { useTheme } from 'next-themes'
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import SwitchReact from 'react-switch'
-
-interface ThemeData {
-    type: 'light' | 'dark';
-}
+import { FiMoon, FiSun } from 'react-icons/fi'
 
 export default function Switch() {
 
     const { theme, setTheme } = useTheme()
-    const [ isActiveTheme, setIsActiveTheme ] = useState(false)
+    const [ isActiveThemeDark, setIsActiveThemeDark ] = useState(false)
+    const [ themeLocalStorage, setThemeLocalStorage ] = useState('')
+
+    useEffect(() => {
+
+        if(typeof window !== undefined)
+            setThemeLocalStorage(localStorage.getItem('light'))
+
+    },[theme])
 
     function changeTheme() {
 
-        if(isActiveTheme){
+        if(isActiveThemeDark){
+            localStorage.setItem('light', 'light')
             setTheme('light')
-            setIsActiveTheme(false)
+            setIsActiveThemeDark(false)
         }else {
+            localStorage.setItem('light', 'dark')
             setTheme('dark')
-            setIsActiveTheme(true)
+            setIsActiveThemeDark(true)
         }
 
     }
 
     return (
         <SwitchReact
+            checkedIcon={<FiSun size={15} color='#fff' />}
+            uncheckedIcon={<FiMoon  size={15} color='#fff'/>}
             onChange={changeTheme}
-            checked={theme === 'dark' ? true : false}
-            checkedIcon={false}
-            uncheckedIcon={false}
-            height={10}
+            checked={themeLocalStorage === 'dark' ? true : false}
+            height={18}
             width={40}
-            handleDiameter={20}
+            handleDiameter={28}
             offColor='#666666'
             onColor='#4953b8'
         />
