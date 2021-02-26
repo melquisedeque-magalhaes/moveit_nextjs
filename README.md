@@ -1,5 +1,5 @@
 <h1 align="center">
-  <img src="/public/logo-full.svg" width="300px"/>
+  <img src="/public/logo-full.svg" width="500px"/>
 </h1>
 
 <h2 align="center"> Moveit ajudar pessoas que ficam muito tempo na frente do computador </h2>
