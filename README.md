@@ -35,7 +35,9 @@
 
 ## 📱 Projeto
 
-<a href="https://moveit-nextjs.vercel.app/" target="_blank">Site Demo 🗒️<a>
+<h5 align="center">
+    Site Demo: <a href="https://moveit-nextjs.vercel.app/" target="_blank">Visualizar App 🗒️<a>
+</h5>
 
 <p>
  Moveit ajudar pessoas que ficam muito tempo na frente do computador. Essa aplicação foi construída durante o Next Level Week 04 da <a href="https://rocketseat.com.br/">Rocketseat</a>
